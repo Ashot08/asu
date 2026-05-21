@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Лабораторная работа 1.3 — Требования к ИС хлебопекарни</title>
+	<meta name="generator" content="LibreOffice 26.2.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2026-05-21T12:37:26"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; direction: ltr; orphans: 0; color: #000000; text-align: left; widows: 0; line-height: 115%; background: transparent }
+		p.western { so-language: en-US; font-size: 12pt; font-family: "Times New Roman", serif }
+		p.cjk { so-language: zh-CN; font-family: "Times New Roman", serif; font-size: 12pt }
+		p.ctl { font-size: 12pt; font-family: "Times New Roman", serif; so-language: hi-IN }
+		h1 { margin-top: 0.19in; margin-bottom: 0.08in; direction: ltr; orphans: 0; line-height: 125%; color: #000000; margin-left: 0.19in; text-align: left; margin-right: 0.19in; widows: 0; background: transparent; page-break-after: avoid }
+		h1.western { font-weight: bold; so-language: en-US; font-size: 14pt; font-family: "Arial", sans-serif }
+		h1.cjk { font-weight: bold; so-language: zh-CN; font-family: "Arial", sans-serif; font-size: 14pt }
+		h1.ctl { font-family: "Arial", sans-serif; font-size: 14pt; so-language: hi-IN; font-weight: bold }
+		h2 { margin-top: 0.15in; margin-bottom: 0.06in; direction: ltr; orphans: 0; line-height: 125%; color: #000000; margin-left: 0.15in; text-align: left; margin-right: 0.15in; widows: 0; background: transparent; page-break-after: avoid }
+		h2.western { font-weight: bold; so-language: en-US; font-size: 13pt; font-family: "Arial", sans-serif }
+		h2.cjk { font-weight: bold; so-language: zh-CN; font-family: "Arial", sans-serif; font-size: 13pt }
+		h2.ctl { font-family: "Arial", sans-serif; font-size: 13pt; so-language: hi-IN; font-weight: bold }
+		h3 { margin-top: 0.13in; margin-bottom: 0.06in; direction: ltr; orphans: 0; line-height: 125%; color: #000000; margin-left: 0.13in; text-align: left; margin-right: 0.13in; widows: 0; background: transparent; page-break-after: avoid }
+		h3.western { font-weight: bold; so-language: en-US; font-size: 12pt; font-family: "Arial", sans-serif }
+		h3.cjk { font-weight: bold; so-language: zh-CN; font-family: "Arial", sans-serif; font-size: 12pt }
+		h3.ctl { font-family: "Arial", sans-serif; font-size: 12pt; so-language: hi-IN; font-weight: bold }
+		p.center { text-align: center }
+		td p { margin-bottom: 0in; direction: ltr; orphans: 0; color: #000000; text-align: left; widows: 0; line-height: 125%; background: transparent }
+		td p.western { so-language: en-US; font-size: 12pt; font-family: "Times New Roman", serif }
+		td p.cjk { so-language: zh-CN; font-family: "Times New Roman", serif; font-size: 12pt }
+		td p.ctl { font-size: 12pt; font-family: "Times New Roman", serif; so-language: hi-IN }
+		th p { margin-bottom: 0in; direction: ltr; orphans: 0; line-height: 125%; color: #000000; text-align: center; widows: 0; background: #f2f2f2 }
+		th p.western { font-weight: bold; so-language: en-US; font-size: 12pt; font-family: "Times New Roman", serif }
+		th p.cjk { font-weight: bold; so-language: zh-CN; font-family: "Times New Roman", serif; font-size: 12pt }
+		th p.ctl { font-family: "Times New Roman", serif; font-size: 12pt; so-language: hi-IN; font-weight: bold }
+		p.right { text-align: right }
+		h1.page-break { page-break-before: always }
+		a:link { color: #000080; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p class="western" align="left">
+Система автоматизации хлебопекарни</p>
+<p class="western" align="left">Лабораторная работа
+1.3</p>
+<p class="center" style="margin-top: 0.63in"><font face="Arial, sans-serif"><font size="5" style="font-size: 18pt"><b>Требования
+к разрабатываемой ИС </b></font></font><br/>
+<font face="Arial, sans-serif"><font size="4" style="font-size: 14pt"><b>(функциональные
+и нефункциональные) </b></font></font>
+</p>
+<p class="center" style="margin-top: 0.25in"><br/>
+<br/>
+
+</p>
+<h1 class="western" align="left" style="margin-right: 0in; margin-left: 0in"><a name="sec1"></a>
+1. Введение</h1>
+<p class="western" align="left">Настоящий документ
+фиксирует требования к информационной
+системе (ИС) хлебопекарни. ИС предназначена
+для поддержки процессов: ведение
+номенклатуры и рецептур, учет заказов
+торговых точек и предзаказов, планирование
+производства и загрузки печей, расчет
+потребности в сырье, управление складом
+и закупками, отгрузка и доставка, а также
+формирование отчетности
+(налоги/статистика/управленческие
+отчеты). 
+</p>
+<p class="western" align="left">Предполагаемая
+архитектура ИС: web-приложение (backend:
+Node.js, frontend: Angular, СУБД: PostgreSQL). 
+</p>
+<h1 class="western" align="left" style="margin-right: 0in; margin-left: 0in"><a name="sec2"></a>
+2. Функциональные требования (варианты
+использования)</h1>
+<h2 class="western" align="left">2.1. Выявление акторов</h2>
+<p class="western" align="left">Основные акторы (роли)
+ИС хлебопекарни приведены в таблице 1.</p>
+<p class="right" align="right"><font face="Arial, sans-serif"><b>Табл.
+1. Выявление акторов</b></font></p>
+<table width="643" cellpadding="2" cellspacing="0">
+	<col width="188"/>
+	<col width="447"/>
+	<tr>
+		<th width="188" style="border: none; padding: 0in"><p class="western">
+			Актор</p>
+		</th>
+		<th width="447" style="border: none; padding: 0in"><p class="western" align="center" style="background: #f2f2f2">
+			Краткое описание</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Менеджер</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Оформляет договоры с торговыми точками,
+			регистрирует заказы и предзаказы,
+			контролирует статусы исполнения.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Планировщик / диспетчер производства</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирует и корректирует план
+			производства по сменам/дням, контролирует
+			загрузку печей и соблюдение сроков.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Технолог</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Ведет рецептуры, нормы расхода сырья,
+			технологические параметры выпечки.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Кладовщик / закупщик</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Учитывает остатки сырья, формирует
+			заявки поставщикам, регистрирует
+			приемку, контролирует сроки годности.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Мастер смены</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Фиксирует факт производства партий,
+			списание сырья по факту, брак, выпуск
+			готовой продукции.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Логист / диспетчер доставки</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирует отгрузки, маршрутные листы,
+			контролирует доставку по торговым
+			точкам и закрытие доставок.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Бухгалтер</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Контролирует реализацию, первичную
+			документацию, формирует регламентированную
+			отчетность.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="188" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Администратор</p>
+		</td>
+		<td width="447" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Управляет пользователями и ролями,
+			настройками системы, резервным
+			копированием и аудитом.</p>
+		</td>
+	</tr>
+</table>
+<h2 class="western" align="left">2.2. Выявление вариантов
+использования</h2>
+<p class="western" align="left">Выявленные варианты
+использования сведены в таблицу 2
+(аналогично шаблону в 02-Search.html).</p>
+<p class="right" align="right"><font face="Arial, sans-serif"><b>Табл.
+2. Выявление вариантов использования</b></font></p>
+<table width="643" cellpadding="2" cellspacing="0">
+	<col width="123"/>
+	<col width="167"/>
+	<col width="341"/>
+	<tr>
+		<th width="123" style="border: none; padding: 0in"><p class="western">
+			Основной актор</p>
+		</th>
+		<th width="167" style="border: none; padding: 0in"><p class="western" align="center" style="background: #f2f2f2">
+			Наименование</p>
+		</th>
+		<th width="341" style="border: none; padding: 0in"><p class="western" align="center" style="background: #f2f2f2">
+			Формулировка</p>
+		</th>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Менеджер</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Регистрация заказа торговой точки</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Позволяет зарегистрировать
+			регулярный/разовый заказ торговой
+			точки на поставку изделий по договору.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Менеджер</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Регистрация предзаказа (мероприятие)</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Позволяет оформить предварительный
+			заказ на крупную партию изделий к
+			фиксированной дате/времени.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Менеджер</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Изменение / отмена заказа</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Позволяет откорректировать заказ до
+			момента запуска в производство или
+			отменить его с фиксацией причины.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Менеджер</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Запрос статуса заказа</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Позволяет получить информацию о
+			текущем состоянии заказа
+			(создан/подтвержден/в
+			плане/произведен/отгружен/доставлен).</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Планировщик</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирование плана производства</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирует план выпуска по сменам/дням
+			на основе заказов и предзаказов с
+			учетом ограничений по печам и сменам.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Планировщик</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Планирование срочного выпуска</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Размещает срочный заказ в ближайшее
+			допустимое окно; план может быть
+			сдвинут с фиксацией причин.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Планировщик</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Коррекция плана производства</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Позволяет корректировать план при
+			дефиците сырья, простое оборудования,
+			изменении заказов.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Технолог</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Ведение рецептур и норм расхода</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Позволяет создавать/редактировать
+			рецептуры изделий, нормы расхода сырья
+			и параметры выпечки.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Кладовщик/закупщик</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Расчет потребности в сырье</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Автоматически рассчитывает потребность
+			по плану производства и рецептурам,
+			формирует предложения по закупке.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Кладовщик/закупщик</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирование заявки поставщику</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Создает заявку на закупку сырья/материалов,
+			учитывая остатки, сроки годности и
+			минимальные партии поставки.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Кладовщик/закупщик</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Приемка сырья на склад</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Регистрирует поступления, партии,
+			сроки годности, цены; обновляет
+			складские остатки.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Мастер смены</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Фиксация выпуска партии</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Фиксирует факт производства партии
+			изделий по плану (количество годных,
+			брак, время, печь/смена).</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Мастер смены</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Списание сырья по факту производства</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Списывает сырье на основании факта
+			выпуска и рецептур (с возможностью
+			корректировки отклонений).</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Логист</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирование отгрузки и маршрутного
+			листа</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Группирует готовую продукцию по
+			торговым точкам/маршрутам, формирует
+			документы отгрузки и доставки.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Логист</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Фиксация доставки</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Фиксирует факт доставки, недовоз/возвраты,
+			время и ответственного; закрывает
+			доставку.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Бухгалтер</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирование отчетности</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Формирует регламентированные отчеты
+			(налоговые/статистические) и
+			управленческие отчеты по выпуску/реализации.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Администратор</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Управление пользователями и ролями</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Создает учетные записи, назначает
+			роли и права, контролирует доступ к
+			данным и функциям.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="123" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Администратор</p>
+		</td>
+		<td width="167" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Резервное копирование и аудит</p>
+		</td>
+		<td width="341" style="border: none; padding: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			Настраивает резервное копирование
+			БД и просмотр журнала действий
+			пользователей (аудит).</p>
+		</td>
+	</tr>
+</table>
+<h2 class="western" align="left">2.3. Детализация
+функциональных требований (по группам)</h2>
+<h3 class="western" align="left">2.3.1. Управление заказами</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-01</b>
+	ИС должна позволять регистрировать
+	заказ торговой точки с составом изделий,
+	количеством и датой поставки. 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-02</b>
+	ИС должна позволять регистрировать
+	предзаказ на мероприятие с фиксированной
+	датой/временем готовности. 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-03</b>
+	ИС должна хранить статусы заказа и
+	историю изменений статуса. 
+	</p></li>
+	<li><p class="western" align="left"><b>FR-04</b> ИС должна
+	обеспечивать поиск и фильтрацию заказов
+	по дате, торговой точке, статусу, типу
+	(TT/предзаказ). 
+	</p></li>
+</ul>
+<h3 class="western" align="left">2.3.2. Планирование
+производства и загрузка печей</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-05</b>
+	ИС должна формировать план производства
+	по сменам/дням на основании заказов. 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-06</b>
+	ИС должна учитывать ограничения:
+	доступность печей, длительность смен,
+	технологические параметры изделий. 
+	</p></li>
+	<li><p class="western" align="left"><b>FR-07</b> ИС должна
+	позволять ручную корректировку плана
+	с фиксацией причины (дефицит сырья,
+	поломка, срочный заказ). 
+	</p></li>
+</ul>
+<h3 class="western" align="left">2.3.3. Рецептуры и сырье</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-08</b>
+	ИС должна поддерживать ведение
+	справочника сырья/материалов (единицы
+	измерения, срок годности, минимальная
+	партия). 
+	</p></li>
+	<li><p class="western" align="left"><b>FR-09</b> ИС должна
+	поддерживать ведение рецептур изделий
+	(состав, нормы расхода на единицу). 
+	</p></li>
+</ul>
+<h3 class="western" align="left">2.3.4. Склад и закупки</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-10</b>
+	ИС должна рассчитывать потребность в
+	сырье на период плана производства. 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-11</b>
+	ИС должна формировать заявки поставщикам
+	на основании потребности и текущих
+	остатков. 
+	</p></li>
+	<li><p class="western" align="left"><b>FR-12</b> ИС должна
+	учитывать партии сырья и сроки годности.
+		</p></li>
+</ul>
+<h3 class="western" align="left">2.3.5. Производственный
+учет (факт)</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-13</b>
+	ИС должна фиксировать факт выпуска
+	партий и отклонения (брак, недовыпуск).
+		</p></li>
+	<li><p class="western" align="left"><b>FR-14</b> ИС должна
+	выполнять списание сырья по факту
+	производства на основании рецептуры
+	с возможностью корректировки. 
+	</p></li>
+</ul>
+<h3 class="western" align="left">2.3.6. Отгрузка и доставка</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-15</b>
+	ИС должна формировать отгрузки по
+	торговым точкам и печатные документы
+	(накладная, маршрутный лист). 
+	</p></li>
+	<li><p class="western" align="left"><b>FR-16</b> ИС должна
+	фиксировать факт доставки и возвраты.
+		</p></li>
+</ul>
+<h3 class="western" align="left">2.3.7. Отчетность</h3>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>FR-17</b>
+	ИС должна формировать отчеты: выпуск,
+	отгрузка/продажи, остатки сырья,
+	выполнение договоров. 
+	</p></li>
+	<li><p class="western" align="left"><b>FR-18</b> ИС должна
+	поддерживать выгрузку отчетов в форматы
+	PDF/Excel (или печатная форма). 
+	</p></li>
+</ul>
+<h1 class="page-break" align="left" style="margin-right: 0in; margin-left: 0in"><a name="sec3"></a>
+3. Нефункциональные требования</h1>
+<h2 class="western" align="left">3.1. Требования к
+безопасности</h2>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-SEC-01</b>
+	Доступ к функциям ИС должен быть
+	разграничен по ролям (RBAC). 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-SEC-02</b>
+	ИС должна поддерживать аутентификацию
+	пользователей (логин/пароль), хранение
+	паролей в виде хешей. 
+	</p></li>
+	<li><p class="western" align="left"><b>NFR-SEC-03</b> ИС должна
+	вести журналирование ключевых действий
+	(заказы, план, списание сырья, отгрузка,
+	доставка). 
+	</p></li>
+</ul>
+<h2 class="western" align="left">3.2. Производительность</h2>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-PERF-01</b>
+	Время отклика типовых операций
+	(поиск/открытие заказа, список планов)
+	— не более 5 секунд. 
+	</p></li>
+	<li><p class="western" align="left"><b>NFR-PERF-02</b> Формирование
+	отчетов за месяц — не более 20 секунд
+	(при нормальном объеме данных). 
+	</p></li>
+</ul>
+<h2 class="western" align="left">3.3. Надежность и
+доступность</h2>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-REL-01</b>
+	Должно выполняться ежедневное резервное
+	копирование PostgreSQL. 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-REL-02</b>
+	Резервные копии должны храниться не
+	менее 7 дней. 
+	</p></li>
+	<li><p class="western" align="left"><b>NFR-REL-03</b> Допустимое
+	время регламентного обслуживания —
+	не более 3% от времени работы. 
+	</p></li>
+</ul>
+<h2 class="western" align="left">3.4. Масштабируемость</h2>
+<ul>
+	<li><p class="western" align="left"><b>NFR-SCAL-01</b> ИС должна
+	поддерживать одновременную работу не
+	менее 15 пользователей (с возможностью
+	роста). 
+	</p></li>
+</ul>
+<h2 class="western" align="left">3.5. Совместимость и
+среда эксплуатации</h2>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-COMP-01</b>
+	Клиентская часть должна работать в
+	современных браузерах (Chrome/Edge/Firefox
+	актуальных версий). 
+	</p></li>
+	<li><p class="western" align="left"><b>NFR-COMP-02</b> Серверная
+	часть — Node.js LTS; СУБД — PostgreSQL (12+). 
+	</p></li>
+</ul>
+<h2 class="western" align="left">3.6. Требования к
+сопровождаемости</h2>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-MAINT-01</b>
+	Должна быть обеспечена централизованная
+	установка/обновление (web-подход). 
+	</p></li>
+	<li><p class="western" align="left"><b>NFR-MAINT-02</b> Конфигурация
+	подключения к БД должна храниться вне
+	кода (переменные окружения). 
+	</p></li>
+</ul>
+<h2 class="western" align="left">3.7. Требования к
+документации</h2>
+<ul>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-DOC-01</b>
+	Должно быть подготовлено руководство
+	пользователя по ролям. 
+	</p></li>
+	<li><p class="western" align="left" style="margin-bottom: 0in"><b>NFR-DOC-02</b>
+	Должна быть подготовлена инструкция
+	администратора (пользователи/роли/backup
+	PostgreSQL). 
+	</p></li>
+	<li><p class="western" align="left"><b>NFR-DOC-0<img src="%D0%9B%D0%B0%D0%B1%201.3_html_f2a3cf50.png" name="Image3" align="left" width="340" height="850" border="0"/>
+3</b>
+	Должен быть ReadMe по развертыванию
+	(Node.js + Angular + PostgreSQL). <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+	</p></li>
+</ul>
+<p class="western" align="left"><br/>
+<br/>
+
+</p>
+<p class="western" align="left"><br/>
+<br/>
+
+</p>
+<p class="western" align="left"><br/>
+<br/>
+
+</p>
+<p class="western" align="left"><br/>
+<br/>
+
+</p>
+<p class="western" align="left"><br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="page-break-before: always"><img src="%D0%9B%D0%B0%D0%B1%201.3_html_320ac056.png" name="Image1" align="left" width="614" height="256" border="0"/>
+<br/>
+<br/>
+
+</p>
+</body>
+</html>
