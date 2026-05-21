@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Поиск акторов и вариантов использования</title>
+	<meta name="generator" content="LibreOffice 26.2.3.2 (Linux)"/>
+	<meta name="author" content="Т.В. Подшивалова"/>
+	<meta name="created" content="2022-11-15T10:27:00"/>
+	<meta name="changedby" content="Шаповалова Светлана Владимировна"/>
+	<meta name="changed" content="2022-11-15T10:27:00"/>
+	<meta name="classification" content="Система диспетчеризации типографии"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin-left: 1in; margin-right: 1in; margin-top: 0.5in; margin-bottom: 1in }
+		p { direction: ltr; margin-bottom: 0.08in; color: #000000; widows: 0; margin-left: 0.5in; page-break-inside: avoid; orphans: 0; line-height: 0.17in; background: transparent }
+		p.western { font-size: 10pt; font-family: "Times New Roman", serif }
+		p.cjk { font-size: 10pt; font-family: "Times New Roman", serif }
+		p.ctl { font-size: 10pt; font-family: "Times New Roman", serif; so-language: ar-SA }
+		h1 { direction: ltr; margin-top: 0.08in; margin-bottom: 0.04in; color: #000000; widows: 0; orphans: 0; line-height: 0.17in; background: transparent; page-break-after: avoid }
+		h1.western { font-weight: bold; font-size: 12pt; font-family: "Arial", sans-serif }
+		h1.cjk { font-weight: bold; font-size: 12pt; font-family: "Times New Roman", serif }
+		h1.ctl { font-family: "Arial", sans-serif; font-size: 10pt; so-language: ar-SA }
+		a:link { color: #0000ff; text-decoration: underline }
+		a:visited { color: #800080; text-decoration: underline }
+		a.sdfootnotesym-western { font-size: 10pt }
+		a.sdfootnotesym-cjk { font-size: 10pt }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#0000ff" vlink="#800080" dir="ltr">
+<div title="header"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+	<br/>
+
+	</p>
+	<p class="western" style="border-top: 1px solid #000000; border-bottom: none; border-left: none; border-right: none; padding-top: 0.01in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in; page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+	<br/>
+
+	</p>
+	<p class="western" align="right" style="margin-bottom: 0in; page-break-inside: auto; border-top: none; border-bottom: 1px solid #000000; border-left: none; border-right: none; padding-top: 0in; padding-bottom: 0.01in; padding-left: 0in; padding-right: 0in; margin-left: 0in">
+	<span style="background: #c0c0c0"><sdfield type=FILENAME format=NAME>02-Search.doc</sdfield></span></p>
+	<p style="page-break-inside: auto; margin-bottom: 0.46in; margin-left: 0in">
+	<br/>
+
+	</p>
+</div><p lang="ru-RU" align="right" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto">
+<span style="background: #c0c0c0"><sdfield type=DOCINFO subtype=THEME>Система диспетчеризации типографии</sdfield></span></p>
+<p lang="ru-RU" align="right" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto">
+<span style="background: #c0c0c0"><sdfield type=DOCINFO subtype=TITLE>Поиск акторов и вариантов использования</sdfield></span></p>
+<p lang="ru-RU" align="right" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto">
+<br/>
+
+</p>
+<p align="right" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto">
+<font face="Arial, sans-serif"><font size="5" style="font-size: 18pt"><b><font size="4" style="font-size: 14pt"><span lang="ru-RU">Версия</span></font><font size="4" style="font-size: 14pt">
+&lt;1.0&gt;</font></b></font></font></p>
+<p align="center" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto">
+<br/>
+
+</p>
+<p class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+<br/>
+
+</p>
+<p style="page-break-inside: auto"><font color="#0000ff"> </font>
+</p>
+<p align="center" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto; page-break-before: always">
+<font face="Arial, sans-serif"><font size="5" style="font-size: 18pt"><b>Лист
+изменений</b></font></font></p>
+<table width="634" cellpadding="7" cellspacing="0">
+	<col width="139"/>
+	<col width="63"/>
+	<col width="236"/>
+	<col width="139"/>
+	<tr valign="top">
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" align="center" style="margin-left: 0in">
+			<b>Дата</b></p>
+		</td>
+		<td width="63" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" align="center" style="margin-left: 0in">
+			<b>Версия</b></p>
+		</td>
+		<td width="236" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" align="center" style="margin-left: 0in">
+			<b>Описание</b></p>
+		</td>
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" align="center" style="margin-left: 0in">
+			<b>Автор</b></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			&lt;<span lang="ru-RU">15</span>/<span lang="ru-RU">фев</span>/<span lang="ru-RU">06</span>&gt;</p>
+		</td>
+		<td width="63" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			&lt;<span lang="ru-RU">1</span>.<span lang="ru-RU">0</span>&gt;</p>
+		</td>
+		<td width="236" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<span lang="ru-RU">Отчёт о выполнении лабораторной
+			работы № 2</span></p>
+		</td>
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" style="margin-left: 0in">
+			Т.С. Подшивалова</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="63" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="236" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="63" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="236" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="63" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="236" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+		<td width="139" style="border: 1px solid #000000; padding: 0in 0.08in"><p style="margin-left: 0in">
+			<br/>
+
+			</p>
+		</td>
+	</tr>
+</table>
+<p class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+<br/>
+
+</p>
+<p align="center" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto; page-break-before: always">
+<font face="Arial, sans-serif"><font size="5" style="font-size: 18pt"><b>Содержание</b></font></font></p>
+<div id="Table of Contents1" dir="ltr"><p style="margin-right: 0.5in; page-break-inside: auto; margin-top: 0.17in; margin-bottom: 0.04in; margin-left: 0in">
+	<span lang="en-US">1.</span><font size="3" style="font-size: 12pt"><span lang="ru-RU">	</span></font><span lang="ru-RU">Выявление</span><span lang="en-US">
+	акторов	<a href="#__RefHeading___Toc152312164">4</a></span></p>
+	<p style="margin-right: 0.5in; page-break-inside: auto; margin-top: 0.17in; margin-bottom: 0.04in; margin-left: 0in">
+	<span lang="ru-RU">2.</span><font size="3" style="font-size: 12pt"><span lang="ru-RU">	</span></font><span lang="ru-RU">Выявление
+	вариантов использования</span><span lang="en-US">	<a href="#__RefHeading___Toc152312165">5</a></span></p>
+	<p style="margin-right: 0.5in; page-break-inside: auto; margin-top: 0.17in; margin-bottom: 0.04in; margin-left: 0in">
+	<span lang="ru-RU">3.</span><font size="3" style="font-size: 12pt"><span lang="ru-RU">	</span></font><span lang="ru-RU">Разработка
+	диаграмм вариантов использования</span><span lang="en-US">	<a href="#__RefHeading___Toc152312166">6</a></span></p>
+</div>
+<p lang="ru-RU" align="center" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto">
+<br/>
+
+</p>
+<p lang="ru-RU" align="center" style="line-height: 100%; margin-left: 0in; margin-bottom: 0in; page-break-inside: auto; page-break-before: always">
+<span style="background: #c0c0c0"><sdfield type=DOCINFO subtype=TITLE>Поиск акторов и вариантов использования</sdfield></span></p>
+<h1 class="western"><a name="__RefHeading___Toc152312164"></a>1.<span lang="ru-RU">Выявление</span>
+акторов</h1>
+<p class="western" align="justify"><span lang="ru-RU">На рисунке
+1 представлены основные кандидаты в
+акторы системы.</span></p>
+<p class="western" align="justify"><img src="02-Search_html_b114c230.gif" name="Object1" align="bottom" width="494" height="254"/>
+</p>
+<p lang="ru-RU" class="western" align="justify"><font size="1" style="font-size: 8pt"><b>Рис.
+1. Анализ акторов системы</b></font></p>
+<p class="western" align="justify"><span lang="ru-RU">Интервью,
+проведённое с указанными выше кандидатами
+показало, что менеджер продаж, старший
+менеджер и начальник отдела продаж
+предполагают использовать разрабатываемую
+АИС однотипно. Это позволило обобщить
+эти 3 роли в одну. Аналогичная ситуация–
+с мастерами первого и второго цехов,
+см. рис. 1.</span></p>
+<p class="western" align="justify"><span lang="ru-RU">Краткое
+описание акторов представлено в табл.
+1.</span><font color="#000000"><span lang="ru-RU"><b> </b></span></font>
+</p>
+<p lang="ru-RU" class="western" align="right" style="margin-top: 0.08in; margin-bottom: 0.04in; text-indent: -0.5in; page-break-inside: auto">
+<font face="Arial CYR, sans-serif"><b>Табл. </b><b>1</b><b>.</b>
+<b>Выявление акторов</b></font></p>
+<table width="631" cellpadding="7" cellspacing="0">
+	<col width="75"/>
+	<col width="526"/>
+	<tr valign="top">
+		<td width="75" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="margin-top: 0.08in; page-break-inside: auto; margin-left: 0in">
+			<font face="Arial CYR, sans-serif"><i>Актор</i></font></p>
+		</td>
+		<td width="526" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="margin-top: 0.08in; page-break-inside: auto; margin-left: 0in">
+			<font face="Arial CYR, sans-serif"><i>Краткое описание</i></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="75" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Менеджер</p>
+		</td>
+		<td width="526" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Размещает заказы в производстве и
+			следит за их исполнением. При
+			необходимости может вносить оперативные
+			корректировки в описания заказов,
+			снять заказ с производства.</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="75" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Диспетчер</p>
+		</td>
+		<td width="526" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Планирует загрузку производственных
+			ресурсов (станков и оборудования) в
+			соответствие с очередью заказов,
+			поступающих от менеджеров. Передаёт
+			планы (сменные задания) в цех. Анализирует
+			фактическое исполнение планов. Вносит
+			оперативные корректировки в планы.</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="75" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Мастер цеха</p>
+		</td>
+		<td width="526" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Назначает исполнителей каждой из
+			работ сменного задания. Следит за
+			фактическим исполнением работ,
+			отчитывается перед диспетчером.</p>
+		</td>
+	</tr>
+</table>
+<p lang="ru-RU" class="western" align="justify"><br/>
+<br/>
+
+</p>
+<h1 lang="ru-RU" class="western" style="page-break-before: always"><a name="__RefHeading___Toc152312165"></a>
+2.Выявление вариантов использования</h1>
+<p class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+<span lang="ru-RU">Выявленные варианты
+использования сведены в таблицу 2.</span></p>
+<p class="western" align="right" style="margin-top: 0.08in; margin-bottom: 0.04in; text-indent: -0.5in; page-break-inside: auto">
+<font face="Arial CYR, sans-serif"><span lang="ru-RU"><b>Табл. 2</b></span><b>.
+</b><span lang="ru-RU"><b>Выявление вариантов
+использования</b></span></font></p>
+<table width="638" cellpadding="7" cellspacing="0">
+	<col width="78"/>
+	<col width="95"/>
+	<col width="421"/>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="margin-top: 0.08in; page-break-inside: auto; margin-left: 0in">
+			<font face="Arial CYR, sans-serif"><i>Основной актор</i></font></p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="margin-top: 0.08in; page-break-inside: auto; margin-left: 0in">
+			<font face="Arial CYR, sans-serif"><i>Наименование</i></font></p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="margin-top: 0.08in; page-break-inside: auto; margin-left: 0in">
+			<font face="Arial CYR, sans-serif"><i>Формулировка</i></font></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Менеджер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Регистрация заказа</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Этот вариант использования  позволяет
+			менеджеру передавать в производство
+			новые заказы. 
+			</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Менеджер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Регистрация срочного заказа</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Этот вариант использования  позволяет
+			менеджеру передавать в производство
+			новые заказы, которые необходимо
+			выполнить в срок, возможно, даже в
+			ущерб обычным заказам.</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Менеджер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">Изменение заказа</span></p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">Менеджер может откорректировать
+			информацию о заказе в производстве</span></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Менеджер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Удаление заказа.</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">При необходимости снятия
+			заказа с производства менеджер или
+			диспетчер вызывает функцию «Удаление
+			заказа».</span></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Менеджер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="justify" style="margin-left: 0in">
+			<span lang="ru-RU">Запрос о заказе</span></p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Используется менеджером для поиска
+			нужной информации о состоянии заказа
+			в производстве, необходимой для
+			клиента.</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Диспетчер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="justify" style="margin-left: 0in">
+			<span lang="ru-RU">Планирование нового заказа</span></p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">Диспетчер размещает заказ
+			в план в «хвост» очереди</span></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Диспетчер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Коррекция плана</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">Диспетчер корректирует
+			план при появлении каких-либо нестыковок</span></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Диспетчер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Планирование срочного заказа</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">Диспетчер размещает заказ
+			в требуемое время; очередь заказов
+			смещается</span></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Диспетчер</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" align="justify" style="margin-left: 0in">
+			<span lang="ru-RU">Выдача сменного задания</span></p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			<span lang="ru-RU">Диспетчер формирует сменное
+			задание для мастера цеха</span></p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Мастер цеха</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Назначение исполнителей</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Мастер цеха назначает исполнителям
+			(цеховому персоналу) работы из сменного
+			задания</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="78" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Мастер цеха</p>
+		</td>
+		<td width="95" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" align="justify" style="margin-left: 0in">
+			Фиксация результатов</p>
+		</td>
+		<td width="421" style="border: 1px solid #000000; padding: 0in 0.08in"><p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-top: 0.08in">
+			Мастер цеха фиксирует результаты
+			выполнения работы цеховым персоналом
+						</p>
+		</td>
+	</tr>
+</table>
+<p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+<br/>
+
+</p>
+<h1 class="western" style="page-break-before: always"><a name="__RefHeading___Toc152312166"></a>
+3.<span lang="ru-RU">Разработка диаграмм вариантов
+использования</span></h1>
+<p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+Все варианты использования показаны
+на рис. 2.</p>
+<p lang="ru-RU" class="western" style="page-break-inside: auto; margin-left: 0in; margin-bottom: 0in">
+<br/>
+
+</p>
+<p class="western" align="justify"><img src="02-Search_html_e416b313.gif" name="Object2" align="bottom" width="436" height="682"/>
+</p>
+<p class="western" align="justify"><font size="1" style="font-size: 8pt"><span lang="ru-RU"><b>Рис.
+2. Диаграмма прецедентов системы</b></span></font></p>
+</body>
+</html>
