@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Лабораторная работа 1.5 — Альбом входных документов (Хлебопекарня)</title>
+  <style>
+    @page { size: A4; margin: 20mm 15mm; }
+    body { font-family: "Times New Roman", serif; line-height: 1.35; color: #111; }
+    h1, h2, h3 { font-family: Arial, sans-serif; margin: 0.8em 0 0.4em; }
+    h1 { font-size: 18pt; text-align: center; }
+    h2 { font-size: 14pt; }
+    h3 { font-size: 12pt; }
+    p { margin: 0.35em 0; }
+    .center { text-align: center; }
+    .meta { font-family: Arial, sans-serif; font-size: 11pt; }
+    .small { font-size: 10.5pt; }
+    table { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; }
+    th, td { border: 1px solid #000; padding: 6px 6px; vertical-align: top; }
+    th { background: #f2f2f2; font-family: Arial, sans-serif; }
+    .no-border, .no-border td { border: none; }
+    .caption { font-style: italic; text-align: center; margin-top: -0.5em; }
+    .note { font-family: Arial, sans-serif; font-size: 10.5pt; color: #333; }
+    .page-break { page-break-before: always; }
+    .doc-form { border: 1px solid #000; padding: 10px; margin: 10px 0 14px; }
+    .doc-form h4 { margin: 0 0 6px; font-family: Arial, sans-serif; }
+    .field { display: flex; gap: 8px; margin: 4px 0; }
+    .field .label { min-width: 210px; font-family: Arial, sans-serif; }
+    .field .value { flex: 1; border-bottom: 1px dotted #000; }
+    .schema { border: 1px solid #000; padding: 10px; margin: 10px 0; }
+    .schema-title { font-family: Arial, sans-serif; font-weight: bold; margin-bottom: 6px; }
+    svg { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+  <h1>Лабораторная работа 1.5</h1>
+  <p class="center meta"><b>Тема:</b> Составление альбома входных документов (предметная область: хлебопекарня)</p>
+  <p class="center meta"><b>Дата:</b> 21.05.2026</p>
+
+  <h2>1. Цель работы</h2>
+  <p>
+    Сформировать <b>альбом входных документов</b> хлебопекарни для дальнейшей автоматизации:
+    определить состав входящих документов, источники их поступления, адресатов внутри предприятия,
+    периодичность/объём и способы ввода в информационную систему.
+  </p>
+
+  <h2>2. Порядок обработки поступающих документов (краткое описание процесса)</h2>
+  <p>
+    Документы, поступающие в хлебопекарню (в том числе электронные), проходят: первичную обработку,
+    предварительное рассмотрение, регистрацию, рассмотрение руководством (при необходимости) и передачу исполнителям.
+  </p>
+  <p>
+    На полученном документе проставляется регистрационный штамп (для бумажных) или формируется
+    регистрационная запись (для электронных). Документы «лично» не вскрываются и передаются адресату.
+  </p>
+  <p>
+    Предварительное рассмотрение выполняется для распределения документов на:
+    (1) требующие обязательного рассмотрения руководством; (2) направляемые непосредственно в подразделения.
+  </p>
+  <p>
+    Обработка и передача документа исполнителям выполняются в день поступления (либо в первый рабочий день,
+    если документ поступил в нерабочее время).
+  </p>
+
+  <h2>3. Схема процесса обработки входящих документов</h2>
+  <p class="note">Схема выполнена в HTML (SVG) по требованию задания.</p>
+
+  <div class="schema">
+    <div class="schema-title">Рис. 1 — Схема обработки входящего документа в хлебопекарне</div>
+    <svg viewBox="0 0 980 440" role="img" aria-label="Схема обработки входящего документа">
+      <defs>
+        <style>
+          .box { fill: #fff; stroke: #000; stroke-width: 2; }
+          .txt { font: 16px Arial, sans-serif; }
+          .smalltxt { font: 14px Arial, sans-serif; }
+          .arrow { stroke: #000; stroke-width: 2; marker-end: url(#m); }
+        </style>
+        <marker id="m" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+          <path d="M0,0 L10,3 L0,6 Z" fill="#000" />
+        </marker>
+      </defs>
+
+      <!-- Start -->
+      <rect class="box" x="30" y="40" rx="10" ry="10" width="260" height="70" />
+      <text class="txt" x="160" y="68" text-anchor="middle">Поступление документа</text>
+      <text class="smalltxt" x="160" y="92" text-anchor="middle">(бумага / e-mail / ЭДО)</text>
+
+      <line class="arrow" x1="290" y1="75" x2="350" y2="75" />
+
+      <!-- Primary processing -->
+      <rect class="box" x="350" y="40" rx="10" ry="10" width="270" height="70" />
+      <text class="txt" x="485" y="68" text-anchor="middle">Первичная обработка</text>
+      <text class="smalltxt" x="485" y="92" text-anchor="middle">проверка/сканирование</text>
+
+      <line class="arrow" x1="620" y1="75" x2="680" y2="75" />
+
+      <!-- Registration -->
+      <rect class="box" x="680" y="40" rx="10" ry="10" width="270" height="70" />
+      <text class="txt" x="815" y="68" text-anchor="middle">Регистрация</text>
+      <text class="smalltxt" x="815" y="92" text-anchor="middle">штамп / запись в ИС</text>
+
+      <!-- Down -->
+      <line class="arrow" x1="815" y1="110" x2="815" y2="150" />
+
+      <!-- Decision -->
+      <rect class="box" x="680" y="150" rx="10" ry="10" width="270" height="80" />
+      <text class="txt" x="815" y="180" text-anchor="middle">Предварительное</text>
+      <text class="txt" x="815" y="202" text-anchor="middle">рассмотрение</text>
+
+      <!-- Branch left (to departments) -->
+      <line class="arrow" x1="680" y1="190" x2="480" y2="190" />
+      <rect class="box" x="250" y="150" rx="10" ry="10" width="230" height="80" />
+      <text class="txt" x="365" y="180" text-anchor="middle">Направление</text>
+      <text class="txt" x="365" y="202" text-anchor="middle">исполнителю</text>
+
+      <!-- Branch right (to management) -->
+      <line class="arrow" x1="950" y1="190" x2="950" y2="260" />
+      <line class="arrow" x1="950" y1="260" x2="815" y2="260" />
+      <rect class="box" x="680" y="240" rx="10" ry="10" width="270" height="80" />
+      <text class="txt" x="815" y="270" text-anchor="middle">Рассмотрение</text>
+      <text class="txt" x="815" y="292" text-anchor="middle">руководством</text>
+
+      <!-- From management to executor -->
+      <line class="arrow" x1="680" y1="280" x2="480" y2="280" />
+
+      <!-- Executor work -->
+      <rect class="box" x="250" y="260" rx="10" ry="10" width="230" height="80" />
+      <text class="txt" x="365" y="290" text-anchor="middle">Исполнение</text>
+      <text class="smalltxt" x="365" y="312" text-anchor="middle">(подразделение/ответственный)</text>
+
+      <!-- Control -->
+      <line class="arrow" x1="365" y1="340" x2="365" y2="390" />
+      <rect class="box" x="250" y="390" rx="10" ry="10" width="230" height="40" />
+      <text class="txt" x="365" y="416" text-anchor="middle">Контроль и архив</text>
+    </svg>
+  </div>
+
+  <h2 class="page-break">4. Таблица альбома входных документов</h2>
+  <p>
+    Таблица составлена по шаблону из задания (Лабораторная 1.5).
+    Для хлебопекарни определены типовые входные документы: заказы торговых точек,
+    предзаказы на мероприятия, счета/накладные от поставщиков, регуляторная корреспонденция и т.д.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Код документа</th>
+        <th>Наименование документа</th>
+        <th>Относится ли документ к УСД</th>
+        <th>Источник получения</th>
+        <th>Кому передается</th>
+        <th>В каком виде поступает (бумажном или электронном)</th>
+        <th>Количество документов за период</th>
+        <th>Способ ввода информации в ИС</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ВД-01</td>
+        <td>Заказ торговой точки на поставку</td>
+        <td>Нет (внутренний формат)</td>
+        <td>Торговая точка (контрагент по договору)</td>
+        <td>Менеджер по продажам; планировщик производства</td>
+        <td>Электронный (веб-форма/Excel/e-mail) или бумажный</td>
+        <td>Ежедневно: 10–40 (в зависимости от числа ТТ)</td>
+        <td>Ввод менеджером в форму «Заказы ТТ»; импорт из Excel</td>
+      </tr>
+      <tr>
+        <td>ВД-02</td>
+        <td>Предзаказ на мероприятие (крупная партия)</td>
+        <td>Нет (внутренний формат)</td>
+        <td>Физ. / юр. лицо (клиент)</td>
+        <td>Менеджер; технолог; планировщик</td>
+        <td>Электронный (веб/почта) или бумажный договор/заявка</td>
+        <td>Еженедельно: 0–10</td>
+        <td>Ввод менеджером в форму «Предзаказы» + прикрепление скана</td>
+      </tr>
+      <tr>
+        <td>ВД-03</td>
+        <td>Изменение/отмена заказа (уведомление)</td>
+        <td>Нет</td>
+        <td>Торговая точка / клиент</td>
+        <td>Менеджер; планировщик; логист</td>
+        <td>Электронный (письмо/форма) или бумажный</td>
+        <td>Ежедневно: 0–10</td>
+        <td>Регистрация события в карточке заказа (поле «История изменений»)</td>
+      </tr>
+      <tr>
+        <td>ВД-04</td>
+        <td>Счет на оплату от поставщика сырья</td>
+        <td>Да (счет — типовой первичный документ)</td>
+        <td>Поставщик</td>
+        <td>Бухгалтер; закупщик/кладовщик</td>
+        <td>Электронный (ЭДО/e-mail PDF) или бумажный</td>
+        <td>Еженедельно: 5–20</td>
+        <td>Загрузка файла в ИС (скан/PDF) + ввод реквизитов (номер, дата, сумма)</td>
+      </tr>
+      <tr>
+        <td>ВД-05</td>
+        <td>Товарная накладная (приход сырья)</td>
+        <td>Да (накладная — УСД)</td>
+        <td>Поставщик / транспортная компания</td>
+        <td>Кладовщик; бухгалтер</td>
+        <td>Бумажный + электронная копия (ЭДО)</td>
+        <td>Еженедельно: 5–25</td>
+        <td>Приемка в модуле «Склад»: ввод позиции/партии/сроков годности + прикрепление скана</td>
+      </tr>
+      <tr>
+        <td>ВД-06</td>
+        <td>Сертификат/декларация качества на сырье</td>
+        <td>Нет (сопроводительный документ)</td>
+        <td>Поставщик</td>
+        <td>Технолог; кладовщик</td>
+        <td>Электронный (PDF) или бумажный</td>
+        <td>По каждой поставке: 1–3</td>
+        <td>Прикрепление файла к партии сырья (карточка партии)</td>
+      </tr>
+      <tr>
+        <td>ВД-07</td>
+        <td>Акт/уведомление о браке/возврате от торговой точки</td>
+        <td>Частично (акт — может быть УСД по форме организации)</td>
+        <td>Торговая точка</td>
+        <td>Менеджер; мастер смены; бухгалтер</td>
+        <td>Бумажный или электронный (фото/скан)</td>
+        <td>Ежемесячно: 0–15</td>
+        <td>Регистрация «Возврат/рекламация» + загрузка вложений</td>
+      </tr>
+      <tr>
+        <td>ВД-08</td>
+        <td>Запрос/предписание от контролирующих органов</td>
+        <td>Нет (внешняя корреспонденция)</td>
+        <td>Налоговые органы / Роспотребнадзор / статистика</td>
+        <td>Директор; бухгалтер; ответственный исполнитель</td>
+        <td>Бумажный или электронный (ЭДО/Госуслуги)</td>
+        <td>Ежеквартально: 0–5</td>
+        <td>Регистрация входящего документа + назначение исполнителя/срока</td>
+      </tr>
+      <tr>
+        <td>ВД-09</td>
+        <td>Платежное поручение/выписка банка (входящая)</td>
+        <td>Да (банковские документы)</td>
+        <td>Банк / клиент</td>
+        <td>Бухгалтер</td>
+        <td>Электронный (банк-клиент)</td>
+        <td>Ежедневно: 1–20</td>
+        <td>Импорт выписки (1С/формат банка) или ручной ввод реквизитов</td>
+      </tr>
+      <tr>
+        <td>ВД-10</td>
+        <td>Заявка на пропуск/въезд транспорта поставщика</td>
+        <td>Нет (внутренний документ)</td>
+        <td>Охрана/склад (внутренний инициатор)</td>
+        <td>Охрана; кладовщик</td>
+        <td>Электронный (внутренняя форма) или бумажный</td>
+        <td>Еженедельно: 5–30</td>
+        <td>Ввод в модуле «Логистика/Склад» (план приемки)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5. Приложение — формы входных документов</h2>
+  <p>
+    Ниже приведены примерные формы документов (в HTML), которые могут использоваться в рамках ИС.
+    Формы адаптированы под предметную область хлебопекарни.
+  </p>
+
+  <div class="doc-form">
+    <h4>Приложение А. Форма «Заявка (заказ) торговой точки» (ВД-01)</h4>
+    <div class="field"><div class="label">Номер заказа:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Дата и время поступления:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Торговая точка (контрагент):</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Контактное лицо / телефон:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Дата поставки:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Адрес доставки:</div><div class="value">&nbsp;</div></div>
+    <p class="small"><b>Состав заказа:</b></p>
+    <table>
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Наименование изделия</th>
+          <th>Ед.</th>
+          <th>Кол-во</th>
+          <th>Комментарий</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>&nbsp;</td><td>шт</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>2</td><td>&nbsp;</td><td>шт</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>3</td><td>&nbsp;</td><td>шт</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody>
+    </table>
+    <p class="small"><b>Подпись/ФИО принявшего заказ (менеджер):</b> _______________________</p>
+  </div>
+
+  <div class="doc-form">
+    <h4>Приложение Б. Форма «Предзаказ на мероприятие» (ВД-02)</h4>
+    <div class="field"><div class="label">Номер предзаказа:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Клиент (ФЛ/ЮЛ):</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">ИНН (для ЮЛ):</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Контакты:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Дата/время готовности:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Место выдачи/доставки:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Условия оплаты (аванс/полная):</div><div class="value">&nbsp;</div></div>
+    <p class="small"><b>Состав предзаказа:</b></p>
+    <table>
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Изделие</th>
+          <th>Кол-во</th>
+          <th>Особые требования (упаковка/брендирование)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+      </tbody>
+    </table>
+    <p class="small"><b>Ответственный менеджер:</b> _______________________</p>
+  </div>
+
+  <div class="doc-form">
+    <h4>Приложение В. Карточка регистрации входящего документа (универсальная)</h4>
+    <div class="field"><div class="label">Регистрационный №:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Дата поступления:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Источник:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Краткое содержание:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Кому направлен:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Срок исполнения:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Ответственный исполнитель:</div><div class="value">&nbsp;</div></div>
+    <div class="field"><div class="label">Отметка об исполнении:</div><div class="value">&nbsp;</div></div>
+  </div>
+
+  <h2>6. Вывод</h2>
+  <p>
+    Сформирован альбом входных документов хлебопекарни: определены основные виды входящей документации,
+    источники, маршрутизация внутри предприятия, объём и способы ввода в ИС. Подготовлены формы документов
+    и схема процесса обработки.
+  </p>
+
+</body>
+</html>
