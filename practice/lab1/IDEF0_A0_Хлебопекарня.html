@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDEF0 A0 — Управление хлебопекарней</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { text-align: center; font-size: 20px; margin: 0 0 16px; }
+    .frame { position: relative; width: 1000px; height: 520px; margin: 0 auto; border: 2px solid #333; background: #fff; }
+    .func { position: absolute; left: 300px; top: 160px; width: 400px; height: 200px; border: 3px solid #1f4e79; background: #eaf2fb; text-align: center; padding-top: 70px; box-sizing: border-box; font-weight: 700; font-size: 22px; }
+    .note { position: absolute; font-size: 16px; background: #fff; padding: 2px 6px; }
+    .arrow { position: absolute; background: #333; }
+    .h { height: 3px; }
+    .v { width: 3px; }
+    .small { font-size: 14px; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>IDEF0 A0 — Управление процессами хлебопекарни</h1>
+  <div class="frame">
+    <div class="func">A0<br>Управление процессами<br>хлебопекарни</div>
+
+    <div class="arrow h" style="left: 20px; top: 210px; width: 280px;"></div>
+    <div class="note" style="left: 20px; top: 178px;">I: Заказы торговых точек</div>
+    <div class="note small" style="left: 20px; top: 230px;">Предзаказы на мероприятия</div>
+
+    <div class="arrow v" style="left: 450px; top: 20px; height: 140px;"></div>
+    <div class="note" style="left: 320px; top: 20px;">C: Договоры, нормы, налоги</div>
+
+    <div class="arrow h" style="left: 700px; top: 250px; width: 280px;"></div>
+    <div class="note" style="left: 760px; top: 215px;">O: План выпуска, отгрузки, отчеты</div>
+
+    <div class="arrow v" style="left: 560px; top: 360px; height: 140px;"></div>
+    <div class="note" style="left: 565px; top: 470px;">M: Персонал, печи, сырье, транспорт</div>
+
+    <div class="note small" style="left: 28px; top: 485px;">Контекстная диаграмма верхнего уровня</div>
+  </div>
+</body>
+</html>
